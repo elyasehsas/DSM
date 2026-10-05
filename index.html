@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DSM | Dubai Stock Mall</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <div class="logo-box">DSM</div>
+
+            <div class="logo-text">
+                <strong>Dubai Stock Mall</strong>
+                <small>PREMIUM SHOPPING</small>
+            </div>
+        </div>
+
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#categories">Categories</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+
+        <button class="cart-button" onclick="openCart()">
+            🛒 Cart
+            <span id="cartCount">0</span>
+        </button>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <div class="gold-label">
+                WELCOME TO DSM
+            </div>
+
+            <h1>
+                Dubai Stock
+                <span>Mall</span>
+            </h1>
+
+            <p>
+                Discover premium products, modern fashion,
+                technology and accessories in one beautiful
+                shopping experience.
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a href="#products" class="gold-button">
+                    SHOP NOW
+                </a>
+
+                <a href="#categories" class="outline-button">
+                    EXPLORE
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-logo">
+
+            <div class="big-circle">
+
+                <div class="inner-circle">
+                    DSM
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FEATURES ================= -->
+
+    <section class="features">
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🚚
+            </div>
+
+            <h3>Fast Delivery</h3>
+
+            <p>
+                Fast and reliable delivery.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🔒
+            </div>
+
+            <h3>Secure Shopping</h3>
+
+            <p>
+                Safe and comfortable shopping.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                ⭐
+            </div>
+
+            <h3>Premium Quality</h3>
+
+            <p>
+                Quality products for everyone.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                💬
+            </div>
+
+            <h3>Customer Support</h3>
+
+            <p>
+                We are here to help.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CATEGORIES ================= -->
+
+    <section id="categories" class="section">
+
+        <div class="section-heading">
+
+            <div class="gold-label">
+                EXPLORE DSM
+            </div>
+
+            <h2>
+                Shop By <span>Category</span>
+            </h2>
+
+        </div>
+
+
+        <div class="categories">
+
+
+            <div class="category-card"
+                 onclick="filterProducts('electronics')">
+
+                <div class="category-image">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=80"
+                    alt="Electronics">
+
+                </div>
+
+                <div class="category-info">
+
+                    <h3>Electronics</h3>
+
+                    <p>
+                        Modern technology
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="category-card"
+                 onclick="filterProducts('fashion')">
+
+                <div class="category-image">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=900&q=80"
+                    alt="Fashion">
+
+                </div>
+
+                <div class="category-info">
+
+                    <h3>Fashion</h3>
+
+                    <p>
+                        Modern clothing
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="category-card"
+                 onclick="filterProducts('shoes')">
+
+                <div class="category-image">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80"
+                    alt="Shoes">
+
+                </div>
+
+                <div class="category-info">
+
+                    <h3>Shoes</h3>
+
+                    <p>
+                        Premium footwear
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="category-card"
+                 onclick="filterProducts('accessories')">
+
+                <div class="category-image">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=900&q=80"
+                    alt="Accessories">
+
+                </div>
+
+                <div class="category-info">
+
+                    <h3>Accessories</h3>
+
+                    <p>
+                        Complete your style
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= PRODUCTS ================= -->
+
+    <section id="products" class="section products-section">
+
+
+        <div class="section-heading">
+
+            <div class="gold-label">
+                DSM STORE
+            </div>
+
+            <h2>
+                Featured <span>Products</span>
+            </h2>
+
+        </div>
+
+
+        <!-- SEARCH -->
+
+        <div class="product-tools">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search products..."
+                onkeyup="searchProducts()"
+            >
+
+            <button onclick="showAllProducts()">
+                ALL PRODUCTS
+            </button>
+
+        </div>
+
+
+        <!-- PRODUCTS -->
+
+        <div class="products" id="productList">
+
+
+            <!-- PRODUCT 1 -->
+
+            <div
+                class="product-card"
+                data-category="electronics"
+                data-name="Wireless Headphones"
+            >
+
+                <div class="product-image">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=80"
+                    alt="Wireless Headphones">
+
+                    <span class="product-badge">
+                        NEW
+                    </span>
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <small>
+                        ELECTRONICS
+                    </small>
+
+                    <h3>
+                        Wireless Headphones
+                    </h3>
+
+                    <p>
+                        Premium wireless sound.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            $49.99
+                        </strong>
+
+                        <button
+                        onclick="addToCart('Wireless Headphones',49.99)">
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRODUCT 2 -->
+
+            <div
+                class="product-card"
+                data-category="electronics"
+                data-name="Smart Watch"
+            >
+
+                <div class="product-image">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80"
+                    alt="Smart Watch">
+
+                    <span class="product-badge">
+                        HOT
+                    </span>
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <small>
+                        ELECTRONICS
+                    </small>
+
+                    <h3>
+                        Smart Watch
+                    </h3>
+
+                    <p>
+                        Modern smart technology.
+                    </p>
+
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            $79.99
+                        </strong>
+
+                        <button
+                        onclick="addToCart('Smart Watch',79.99)">
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRODUCT 3 -->
+
+            <div
+                class="product-card"
+                data-category="fashion"
+                data-name="Premium Hoodie"
+            >
+
+                <div class="product-image">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=900&q=80"
+                    alt="Premium Hoodie">
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <small>
+                        FASHION
+                    </small>
+
+                    <h3>
+                        Premium Hoodie
+                    </h3>
+
+                    <p>
+                        Comfortable modern style.
+                    </p>
+
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            $39.99
+                        </strong>
+
+                        <button
+                        onclick="addToCart('Premium Hoodie',39.99)">
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRODUCT 4 -->
+
+            <div
+                class="product-card"
+                data-category="shoes"
+                data-name="Sport Sneakers"
+            >
+
+                <div class="product-image">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80"
+                    alt="Sport Sneakers">
+
+                    <span class="product-badge">
+                        SALE
+                    </span>
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <small>
+                        SHOES
+                    </small>
+
+                    <h3>
+                        Sport Sneakers
+                    </h3>
+
+                    <p>
+                        Lightweight and comfortable.
+                    </p>
+
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            $59.99
+                        </strong>
+
+                        <button
+                        onclick="addToCart('Sport Sneakers',59.99)">
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRODUCT 5 -->
+
+            <div
+                class="product-card"
+                data-category="accessories"
+                data-name="Luxury Watch"
+            >
+
+                <div class="product-image">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=900&q=80"
+                    alt="Luxury Watch">
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <small>
+                        ACCESSORIES
+                    </small>
+
+                    <h3>
+                        Luxury Watch
+                    </h3>
+
+                    <p>
+                        Elegant premium design.
+                    </p>
+
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            $129.99
+                        </strong>
+
+                        <button
+                        onclick="addToCart('Luxury Watch',129.99)">
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRODUCT 6 -->
+
+            <div
+                class="product-card"
+                data-category="accessories"
+                data-name="Premium Bag"
+            >
+
+                <div class="product-image">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=80"
+                    alt="Premium Bag">
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <small>
+                        ACCESSORIES
+                    </small>
+
+                    <h3>
+                        Premium Bag
+                    </h3>
+
+                    <p>
+                        Elegant everyday bag.
+                    </p>
+
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            $69.99
+                        </strong>
+
+                        <button
+                        onclick="addToCart('Premium Bag',69.99)">
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= DEAL BANNER ================= -->
+
+    <section class="deal">
+
+        <div>
+
+            <div class="gold-label">
+                SPECIAL OFFER
+            </div>
+
+            <h2>
+                Premium Style.
+                <span>Better Price.</span>
+            </h2>
+
+            <p>
+                Discover selected DSM products and enjoy
+                our special offers.
+            </p>
+
+        </div>
+
+
+        <a href="#products" class="gold-button">
+            SHOP DEALS
+        </a>
+
+    </section>
+
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about" class="about">
+
+        <div class="about-content">
+
+            <div class="gold-label">
+                ABOUT DSM
+            </div>
+
+            <h2>
+                Shopping Made
+                <span>Beautiful.</span>
+            </h2>
+
+            <p>
+                Dubai Stock Mall is a modern shopping concept
+                created for people who love quality, style
+                and a smooth online shopping experience.
+            </p>
+
+            <a href="#products" class="gold-button">
+                START SHOPPING
+            </a>
+
+        </div>
+
+
+        <div class="about-mark">
+            DSM
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= NEWSLETTER ================= -->
+
+    <section class="newsletter">
+
+        <div class="gold-label">
+            STAY UPDATED
+        </div>
+
+        <h2>
+            Join the <span>DSM</span> Community
+        </h2>
+
+        <p>
+            Get updates about new products and special offers.
+        </p>
+
+
+        <div class="subscribe">
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+            >
+
+            <button onclick="subscribe()">
+                SUBSCRIBE
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact" class="contact">
+
+        <div class="section-heading">
+
+            <div class="gold-label">
+                CONTACT
+            </div>
+
+            <h2>
+                Contact <span>DSM</span>
+            </h2>
+
+        </div>
+
+
+        <div class="contact-cards">
+
+
+            <div class="contact-card">
+
+                <div>
+                    📧
+                </div>
+
+                <h3>
+                    Email
+                </h3>
+
+                <p>
+                    info@dsm.com
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div>
+                    📞
+                </div>
+
+                <h3>
+                    Phone
+                </h3>
+
+                <p>
+                    +93 700 000 000
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div>
+                    📍
+                </div>
+
+                <h3>
+                    Location
+                </h3>
+
+                <p>
+                    Afghanistan
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            DSM
+        </div>
+
+        <h3>
+            Dubai Stock Mall
+        </h3>
+
+        <p>
+            Premium shopping experience.
+        </p>
+
+
+        <div class="creator">
+
+            Website Designed By
+
+            <strong>
+                Mohammad Elyas Ehsas
+            </strong>
+
+        </div>
+
+
+        <div class="copyright">
+            © 2026 DSM — Dubai Stock Mall.
+            All Rights Reserved.
+        </div>
+
+    </footer>
+
+
+
+    <!-- ================= CART MODAL ================= -->
+
+    <div id="cartModal" class="cart-modal">
+
+        <div class="cart-box">
+
+            <button
+                class="close-cart"
+                onclick="closeCart()">
+                ×
+            </button>
+
+
+            <h2>
+                Your Cart
+            </h2>
+
+
+            <div id="cartItems">
+
+                <p class="empty-cart">
+                    Your cart is empty.
+                </p>
+
+            </div>
+
+
+            <div class="cart-total">
+
+                <span>
+                    Total
+                </span>
+
+                <strong>
+                    $<span id="cartTotal">
+                        0.00
+                    </span>
+                </strong>
+
+            </div>
+
+
+            <button
+                class="checkout-button"
+                onclick="checkout()">
+
+                CHECKOUT
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
